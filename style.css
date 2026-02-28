@@ -1,0 +1,212 @@
+body{
+    font-family: sans-serif;
+    margin: 0px;
+}
+
+button, label, li, input{
+    font-size: 18px;
+}
+
+
+.box-name{
+    font-size: 30px;
+    color: #fff;
+
+    background-color: #6BABFF;
+    padding: 0px 5px;
+    border-radius: 10px;
+}
+
+
+
+header{
+    padding: 1px !important; /* Fixes background color*/
+
+    background-color: #6BABFF;
+    color: #fff;
+
+    text-align: center;
+}
+
+
+
+.box{
+    display: flex;
+    flex-wrap: wrap;
+    
+    justify-self: center;
+    gap: 10px;
+
+    margin: 20px;
+
+    border: none;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px #696969;
+
+    padding: 10px;
+    
+    width: 100%;
+    max-width: 600px;
+
+    background-color: #fff;
+}
+
+
+
+.output-box{
+    justify-content: center;
+}
+
+
+#strength-indicator{
+    font-size: 30px;
+    color: #fff;
+
+    background-color: #6BABFF;
+    padding: 0px 5px;
+    border-radius: 10px;
+}
+
+
+#output{
+    width: 100%;
+    height: 30px;
+
+    border-radius: 20px;
+    border: none;
+
+    color: #fff;
+    background-color: #6BABFF;
+
+    text-align: center;
+}
+
+#output::placeholder{
+    color: #ddd;
+}
+
+
+#generate-button{
+    flex: 1 1 0;
+    cursor: pointer;
+
+    border: none;
+    border-radius: 20px;
+
+    color: #fff;
+    background-color:#BF6BFF;
+    transition: background-color 0.2s;
+
+    height: 30px;
+}
+
+#generate-button:hover{
+    background-color: #AD5ADD;
+}
+
+#generate-button:active{
+    background-color: #9C49CC;
+}
+
+
+#copy-button{
+    flex: 0 0 0;
+    cursor: pointer;
+
+    border: none;
+    border-radius: 20px;
+
+    color: #fff;
+    background-color: #FFBF6B;
+    transition: background-color 0.2s;
+
+    height: 30px;
+}
+
+#copy-button:hover{
+    background-color: #DDAD5A;
+}
+
+#copy-button:active{
+    background-color: #CC9C49;
+}
+
+
+
+.settings-box{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+#length-range{
+    width: 100%;
+}
+
+
+
+.tips-box{
+    flex-direction: column;
+    align-items: center;
+}
+
+.tips-box span{
+    text-align: center;
+}
+
+.tips-box ul{
+    margin: 0px;
+}
+
+.tips-box li{
+    margin: 10px;
+}
+
+
+#notification{
+    display: flex;
+    z-index: 9999;
+    position: fixed;
+
+    border: none;
+    border-radius: 20px;
+    background-color:#BF6BFF;
+    
+    color: #fff;
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+
+    height: 30px;
+    width: 98%;
+    margin: 1%; /*just works*/
+
+    top: -50px;
+    transition: top 1s;
+}
+
+
+
+#change-theme-button{
+    position: fixed;
+    z-index: 9998;
+
+    bottom: 0px;
+    right: 0px;
+
+    margin: 10px;
+    padding: 10px;
+    border: none;
+
+    background-color: #000;
+    border-radius: 15px;
+}
+
+
+
+@media (max-width: 600px) {
+    .box {
+        width: auto !important;
+    }
+}

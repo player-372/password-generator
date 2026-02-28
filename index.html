@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Генератор паролей</title>
+    </head>
+    <body>
+
+        <header>
+            <h1>Генератор паролей</h1>
+            <h2>Создайте надёжный пароль за секунду</h2>
+        </header>
+
+
+
+        <div class="output-box box">
+            <span id="strength-indicator">Средний</span>
+            <input id="output" type="text" readonly placeholder="Сгенерируйте пароль..." />
+            <button id="generate-button">Сгенерировать</button>
+            <button id="copy-button">Копировать</button>
+        </div>
+
+
+
+        <div class="settings-box box">
+            <span class="box-name">Настройки</span>
+
+
+            <label for="lowercase-checkbox">Cтрочные буквы (a-z) 
+                <input id="lowercase-checkbox" type="checkbox" checked />
+            </label>
+            
+            
+            <label for="uppercase-checkbox">Включить заглавные буквы (A-Z) 
+                <input id="uppercase-checkbox" type="checkbox" checked />
+            </label>
+            
+            
+            <label for="numbers-checkbox">Включить цифры (0-9) 
+                <input id="numbers-checkbox" type="checkbox" checked />
+            </label>
+            
+            
+            <label for="special-checkbox">Включить специальные символы (!@#$%^&*()_+-=[]{}|;:,.<>?) 
+                <input id="special-checkbox" type="checkbox" checked />
+            </label>
+            
+            
+            <span>Количество символов: <span id="length-indicator">12</span> </span>
+            <input id="length-range" type="range" value="12" min="4" max="32" />
+        </div>
+
+
+
+        <div class="tips-box box">
+            <span class="box-name">Советы по безопасности</span>
+            <ul>
+                <li>Используйте разные пароли для разных сайтов</li>
+                <li>Меняйте пароли регулярно</li>
+                <li>Храните пароли в менеджерах паролей или записывайте их</li>
+            </ul>
+        </div>
+
+
+
+        <div id="notification"><div>Скопировано!</div></div>
+
+        
+
+        <button id="change-theme-button">🌙</button>
+
+        <script src="script.js"></script>
+    </body>
+</html>
