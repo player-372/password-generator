@@ -100,21 +100,30 @@ function chooseSymbol() {
 
 
 function checkStrength() {
-  let strength = (Number(lengthRange.value) / 4) + (chosenSymbols.length - 1);
+  let strength = (Number(lengthRange.value)) + (chosenSymbols.length - 1);
 
-  if (strength <= 5) {
+  if (strength < 12) {
     strengthIndicator.style.backgroundColor = "#FF6969";
     strengthIndicator.textContent = "Слабый";
+    strengthIndicator.style.boxShadow = "none"
   }
 
-  if (strength > 5) {
+  if (strength >= 12) {
     strengthIndicator.style.backgroundColor = "#FFB469";
     strengthIndicator.textContent = "Средний";
+    strengthIndicator.style.boxShadow = "none"
   }
 
-  if (strength >= 10) {
+  if (strength >= 16) {
     strengthIndicator.style.backgroundColor = "#69FF69";
     strengthIndicator.textContent = "Сильный";
+    strengthIndicator.style.boxShadow = "none"
+  }
+  
+  if (strength >= 24) {
+    strengthIndicator.style.backgroundColor = "#69FF69";
+    strengthIndicator.textContent = "Очень Сильный";
+    strengthIndicator.style.boxShadow = "0px 0px 15px 5px rgba(105, 255, 105, 0.8)"
   }
 }
 
@@ -198,4 +207,5 @@ function changeTheme() {
 
 
 changeThemeButton.addEventListener('click', changeTheme);
+
 changeTheme();
